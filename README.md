@@ -8,47 +8,48 @@
     * Creacion de NavBar.js
     * Incorporacion de NavBar
 
-□ Desafío: Crea tu landing
+☑ Desafío: Crea tu landing
     * Agregado de icono en NavBar.js con CartWidget.js
     * Creacion de ItemListContainer.js
     * Incorporacion de ItemListContainer
 
 □ Desafío: Contador con botón
-    *
-    *
+    * Correcciones aplicadas
+    * Creacion de ItemCount.js
+    * Incorporacion de dos contadores para corroborar funcionamiento
 
 □ Desafío: Catálogo con MAPS y Promises
-    *
-    *
+    * 
+    * 
 
 □ Desafío: Detalle de Producto
-    *
-    *
+    * 
+    * 
 
 □ Primera Entrega del Proyecto Final
-    *
-    *
+    * 
+    * 
 
 □ Desafío: Sincronizar counter
-    *
-    *
+    * 
+    * 
 
 □ Desafío: CartContext
-    *
-    *
+    * 
+    * 
 
 □ Desafío: Cart View
-    *
-    *
+    * 
+    * 
 
 □ Desafío: Item Collection
-    *
-    *
+    * 
+    * 
 
 □ Desafío: Item Collection II
-    *
-    *
+    * 
+    * 
 
 □ Entrega del Proyecto Final
-    *
-    *
+    * 
+    * 
