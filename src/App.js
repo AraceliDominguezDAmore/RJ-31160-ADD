@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './componentes/NavBar';
 import ItemListContainer from './componentes/ItemListContainer';
@@ -9,9 +8,8 @@ function App() {
     <div className="App">
       <NavBar/> <br/>
       <h1>Palo Macrameando</h1> <br/>
-      <ItemListContainer titulo= "Hola Mundo"/> <br/><hr/>
+      <ItemListContainer titulo= "Hola Mundo"/> <br/>
       <ItemCount stock={10} initial={1}/>
-      <ItemCount stock={20} initial={5}/>
     </div>
   );
 }
