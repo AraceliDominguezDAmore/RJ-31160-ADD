@@ -6,7 +6,7 @@ const productos = [
         "formato": "Digital",
         "distribuidora": "Big Hit - IRIVER",
         "precio": 5500,
-        "stock": 50,
+        "stock": 10,
         "img": "MOTS.jpg"
     },
     {
@@ -16,7 +16,7 @@ const productos = [
         "formato": "Digital y fisico",
         "distribuidora": "Columbia Records",
         "precio": 6000,
-        "stock": 40,
+        "stock": 8,
         "img": "four.jpg"
     },
     {
@@ -26,7 +26,7 @@ const productos = [
         "formato": "Fisico",
         "distribuidora": "Columbia Records",
         "precio": 4000,
-        "stock": 30,
+        "stock": 5,
         "img": "SGFG.png"
     },
     {
@@ -36,7 +36,7 @@ const productos = [
         "formato": "Digital",
         "distribuidora": "Capitol Records",
         "precio": 5000,
-        "stock": 45,
+        "stock": 9,
         "img": "YB.jpg"
     },
     {
@@ -46,7 +46,7 @@ const productos = [
         "formato": "Digital y fisico",
         "distribuidora": "Big Hit - Pdogg",
         "precio": 5000,
-        "stock": 35,
+        "stock": 3,
         "img": "WINGS.jpg"
     },
     {
@@ -56,7 +56,7 @@ const productos = [
         "formato": "Fisico",
         "distribuidora": "Syco - Sony",
         "precio": 5300,
-        "stock": 25,
+        "stock": 12,
         "img": "tmh.jpg"
     },
     {
@@ -66,7 +66,7 @@ const productos = [
         "formato": "Digital",
         "distribuidora": "Syco - Columbia",
         "precio": 4000,
-        "stock": 28,
+        "stock": 15,
         "img": "mm.jpg"
     },
     {
@@ -76,7 +76,7 @@ const productos = [
         "formato": "Digital y fisico",
         "distribuidora": "Interscope Records",
         "precio": 3000,
-        "stock": 38,
+        "stock": 4,
         "img": "CALM.jpg"
     },
     {
@@ -86,7 +86,7 @@ const productos = [
         "formato": "Fisico",
         "distribuidora": "Big Hit - Pdogg",
         "precio": 4500,
-        "stock": 48,
+        "stock": 6,
         "img": "DW.jpg"
     }
 ];
