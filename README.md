@@ -33,14 +33,14 @@
     * Actualizacion de ItemListContainer para usar useParams
     * Actualizacion de ItemDetailcontainer para usar useParams
 
-□ Desafío: Sincronizar counter
+☑ Desafío: Sincronizar counter
     * Correcciones aplicadas
     * Separacion de responsabilidad del count y detalle del item 
     * Agregado de eventos
 
 □ Desafío: CartContext
-    * 
-    * 
+    * Agregado de imagenes y links
+    * Implementar contexto y acciones en el Cart
 
 □ Desafío: Cart View
     * 

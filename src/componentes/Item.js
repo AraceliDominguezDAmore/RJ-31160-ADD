@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 
-//const discoImg = require.context ('../assets/img')
-
 const Item=({productos})=>{
   return(
     <div>
-      {/* <img
-        src= {discoImg (`./${productos.img}.jpg`)}
-        className="img-thumbnail animate__animated animate__fadeIn"
-      /> */}
+      <img
+        width="300"
+        src= {productos.img}
+        alt= {productos.nombre}
+        className="mt-5 inline-flex items-center"
+      />
       <div>
         <h3 className="h-7 tracking-widest text-yellow-400 font-bold title-font">
           {productos.nombre}

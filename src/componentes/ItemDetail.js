@@ -1,22 +1,24 @@
 import React, { useState } from "react";
 import ItemCount from './ItemCount';
-
-//const discoImg = require.context ('../assets/img')
+import useCartContext from '../store/CartContext'
 
 const ItemDetail=({producto})=>{
   const [isInCart, setIsInCart] = useState(false)
+  const { addToCart } = useCartContext();
 
   function onAdd (count) {
-    console.log(`Agregaste al carrito ${count} items.`);
     setIsInCart(true);
+    addToCart (producto, count)
+    console.log ("Agregado al cart:", producto, count)
   }
   return(
     <div>
-      {/* <img
-        src= {discoImg (`./ ${producto.id}.jpg`)}
+      <img
+        width="300"
+        src= {producto.img}
         alt= {producto.nombre}
-        className="img-thumbnail animate__animated animate__fadeIn"
-      /> */}
+        className="mt-5 inline-flex items-center"
+      />
       <div>
         <h3 className="h-7 tracking-widest text-yellow-400 font-bold title-font">
           {producto.nombre}
@@ -33,7 +35,6 @@ const ItemDetail=({producto})=>{
         : 
           <ItemCount onAdd= {onAdd} stock={producto.stock} initial={1}/>
         }
-        
       </div>
     </div>
   );
