@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom'
 import ItemCount from './ItemCount';
 import useCartContext from '../store/CartContext'
 
@@ -11,6 +12,7 @@ const ItemDetail=({producto})=>{
     addToCart (producto, count)
     console.log ("Agregado al cart:", producto, count)
   }
+  
   return(
     <div>
       <img
@@ -31,7 +33,7 @@ const ItemDetail=({producto})=>{
         </span>
         <p className="leading-relaxed text-black">{producto.formato}</p>
         { isInCart? 
-          <button>Ver en carrito</button>
+          <Link to="/cart">Ver en carrito</Link>
         : 
           <ItemCount onAdd= {onAdd} stock={producto.stock} initial={1}/>
         }
