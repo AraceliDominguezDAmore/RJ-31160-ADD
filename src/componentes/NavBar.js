@@ -13,8 +13,8 @@ function NavBar () {
                 <Link to="/" className="mr-5 hover:text-gray-900">Disqueria Online</Link>
                 <ul>
                     <li>
-                        <Link to="/category/One Direction" className="mr-5 hover:text-gray-900">1 D</Link>
-                        <Link to="/category/5 Seconds of Summer" className="mr-5 hover:text-gray-900">5 SOS</Link>
+                        <Link to="/category/One Direction" className="mr-5 hover:text-gray-900">One Direction</Link>
+                        <Link to="/category/5 Seconds of Summer" className="mr-5 hover:text-gray-900">5 Seconds of Summer</Link>
                         <Link to="/category/BTS" className="mr-5 hover:text-gray-900">BTS</Link>
                     </li>
                 </ul>  

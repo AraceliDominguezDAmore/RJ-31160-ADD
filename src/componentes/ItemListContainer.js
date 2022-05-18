@@ -1,32 +1,31 @@
 import React, { useEffect, useState } from 'react'
-import productos from '../data/productos'
 import ItemList from './ItemList';
 import { useParams } from 'react-router-dom'
+import { getAllItems  as getProductos, getItemsByCategory} from '../data'
 
-function getProductos(categoryid) {
-  return new Promise ( (resolve, reject) => {
-    setTimeout(() => {
-      if (categoryid){
-        const arrayFiltered = productos.filter ( (producto) => {
-          return producto.banda === categoryid
-        })
-        resolve (arrayFiltered)
-      } else {
-        resolve (productos);
-      }
-      }, 700);
-  });
-}
 
 function ItemListContainer ( props ) {
   const [productos, setProductos] = useState([])
-  const categoryid = useParams().categoryid;
-  
-  useEffect( () =>{
-    getProductos(categoryid).then (respuestaPromise => {
-      setProductos (respuestaPromise)
-    })
-  }, [categoryid])
+  const categoryid = useParams();
+    
+  useEffect(()=>{
+    if (categoryid === undefined) {
+      getProductos().then((respuestaPromise) => {
+        setProductos(respuestaPromise);
+      });
+    } else {
+      getItemsByCategory(categoryid).then((respuestaPromise) => {
+        setProductos(respuestaPromise);
+      });
+    }
+  }, [categoryid]);
+
+  useEffect(()=>{
+    getProductos(categoryid).then((respuestaPromise) => {
+      setProductos(respuestaPromise);
+    });
+  }, [categoryid]);
+
   return (
     <div>
       <h1>{props.titulo}</h1>
