@@ -1,9 +1,32 @@
 import React from 'react'
 import useCartContext from '../store/CartContext'
 import { Link } from 'react-router-dom'
+import { createBuyOrder } from '../data'
 
 function CartView() {
-    const { cart, removeFromCart, clearCart } = useCartContext()
+    const { cart, removeFromCart, clearCart, getTotalPrice } = useCartContext()
+    
+    function handleBuy () {
+        const itemsToBuy = cart.map ((item) => ({
+            tittle: item.titulo,
+            cant: item.cant,
+            price: item.precio,
+            id: item.id
+        }))
+        const buyOrder = {
+            buyer: {
+                name: "Araceli",
+                phone: "987654321",
+                email: "araceli@gmail.com",
+            },
+            items: itemsToBuy,
+            total: getTotalPrice(),
+        }
+
+        createBuyOrder(buyOrder)
+        clearCart()
+    }
+
     if (cart.length === 0) {
         return (
             <div>
@@ -25,8 +48,9 @@ function CartView() {
         })}
         <Link to="/" className="btn btn-outline btn-secondary m-3">Volver al catalogo</Link>
         <button className="btn btn-outline btn-error m-3" onClick={clearCart}>Vaciar carrito</button>
+        <button className="btn btn-outline btn-info m-3" onClick={handleBuy}>COMPRAR</button>
         </div>        
     }
 }
 
-export default CartView
+export default CartView;

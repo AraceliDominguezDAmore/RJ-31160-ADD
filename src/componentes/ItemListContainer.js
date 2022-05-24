@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import ItemList from './ItemList';
 import { useParams } from 'react-router-dom'
-import { getAllItems  as getProductos, getItemsByCategory} from '../data'
-
+import { getAllItems as getProductos, getItemsByCategory} from '../data'
 
 function ItemListContainer ( props ) {
   const [productos, setProductos] = useState([])
-  const categoryid = useParams();
+  const { categoryid } = useParams();
     
   useEffect(()=>{
     if (categoryid === undefined) {
@@ -18,12 +17,6 @@ function ItemListContainer ( props ) {
         setProductos(respuestaPromise);
       });
     }
-  }, [categoryid]);
-
-  useEffect(()=>{
-    getProductos(categoryid).then((respuestaPromise) => {
-      setProductos(respuestaPromise);
-    });
   }, [categoryid]);
 
   return (
