@@ -46,7 +46,7 @@ export async function getItemsByCategory(categoryid) {
 //obtener un solo item
 export async function getItem(id) {
     const miColec = collection (firestoreDB, 'productos')
-    const productoRef = doc (miColec,id)
+    const productoRef = doc (miColec, id)
     const productoSnap = await getDoc(productoRef);
 
     return{
@@ -63,9 +63,9 @@ export async function createBuyOrder (orderData){
         ...orderData, 
         date: buyTimestamp 
     };
-
+    
     const miColec = collection (firestoreDB, "buyOrders");
     const orderDoc = await addDoc (miColec, orderWithDate);
 
-    console.log("Compra ID:", orderDoc.id);
+    alert("Gracias por tu compra! Tu codigo de seguimiento es: " + orderDoc.id);
 }

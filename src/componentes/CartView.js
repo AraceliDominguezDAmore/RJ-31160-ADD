@@ -8,7 +8,7 @@ function CartView() {
     
     function handleBuy () {
         const itemsToBuy = cart.map ((item) => ({
-            tittle: item.titulo,
+            tittle: item.nombre,
             cant: item.cant,
             price: item.precio,
             id: item.id
@@ -26,7 +26,7 @@ function CartView() {
         createBuyOrder(buyOrder)
         clearCart()
     }
-
+    
     if (cart.length === 0) {
         return (
             <div>
@@ -46,9 +46,9 @@ function CartView() {
                 <button className="btn btn-sm btn-outline btn-error m-3" onClick={ () =>removeFromCart(itemCart.id)}> X </button> <br/><hr/>
             </div>
         })}
-        <Link to="/" className="btn btn-outline btn-secondary m-3">Volver al catalogo</Link>
-        <button className="btn btn-outline btn-error m-3" onClick={clearCart}>Vaciar carrito</button>
-        <button className="btn btn-outline btn-info m-3" onClick={handleBuy}>COMPRAR</button>
+        <Link to="/" className="btn btn-outline btn-secondary m-3"> Volver al catalogo </Link>
+        <button className="btn btn-outline btn-error m-3" onClick = {clearCart} > Vaciar carrito </button>
+        <button className="btn btn-outline btn-info m-3" onClick = {handleBuy} > COMPRAR </button>
         </div>        
     }
 }
